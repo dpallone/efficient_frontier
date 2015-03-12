@@ -1,0 +1,21 @@
+Main Function
+     ask for two assetts
+     	 Do stocks for now, but extend functionality to searching as well
+     call EfficientFrontier()
+EfficientFrontier()
+	get data into two numpy arrays (dates, prices, returns)
+	    Make sure dates are equal... Use the shortest of the
+	    possible time series
+	Compute CAGR of both price series
+	Compute Variance of each returns
+	Compute st. dev of each returns
+	Create array of weights for both stocks
+	compute expected value and variance (portfolio on both) 
+		for each weight vector
+	matplotlib to graph it pretty
+
+packages:
+	matplotlib.pyplot plt
+	pandas pd
+	scipy sp
+	yahoo-finance as yf
