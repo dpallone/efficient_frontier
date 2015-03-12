@@ -64,7 +64,8 @@ def efficient_frontier(tickA,tickB):
     portfolio_stats['Variance'] = varianceP
     portfolio_stats['w-'+tickA] = weights[tickA]
     portfolio_stats['w-'+tickB] = weights[tickB]
-    portfolio_stats['risk tolerance'] = np.diff(portfolio_stats['Expected Return'] / np.diff(portfolio_stats['Variance'])
+    portfolio_stats['risk tolerance'] = (np.diff(portfolio_stats['Expected Return'])
+                                        / np.diff(portfolio_stats['Variance']))
     x = portfolio_stats['Variance']
     y = portfolio_stats['Expected Return']
     z = portfolio_stats['risk tolerance']
